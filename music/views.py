@@ -4,7 +4,7 @@ from .models import *
 
 def list_page(request):
   context = {
-    'musician': Musician.objects.all()
+    'musicians': Musician.objects.all()
   }
   return render(request, 'list_page.html', context)
 

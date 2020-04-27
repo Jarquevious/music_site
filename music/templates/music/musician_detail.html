@@ -1,0 +1,12 @@
+<h1>{{  musician.name }}</h1>
+
+<ul>
+    {% for album in musician.album_set.all %}
+    <li>
+    <a href="/music/album/{{ album.id }}">{{ album }}</a>
+    </li>
+    {% endfor %}
+   
+</ul> 
+<a href="{% url 'home' %}">Return home</a>
+

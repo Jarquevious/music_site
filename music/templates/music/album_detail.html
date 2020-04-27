@@ -1,0 +1,24 @@
+<h1>Albums</h1>
+<h2>{{musician.album_set}}</h2>
+<h3>SONGS</h3>
+<ul>
+  {% for song in album.song_set.all %}
+  <li>
+    <a href="/music/song/{{song.id }}">{{ song.name }} </a>
+    <br>
+  </li>
+  {%endfor%}
+</ul>
+<br>
+<br>
+<h1>{{ album.name }} Details</h1>
+<h3>Artist: {{ album.artist }}</h3>
+<h3>Genre: {{ album.genre }}</h3>
+<h3>Publish Date: {{ album.publish_date }}</h3>
+<a href="{% url 'home' %}">Return home</a>
+
+
+
+
+
+
